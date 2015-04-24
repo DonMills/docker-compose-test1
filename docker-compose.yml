@@ -1,0 +1,15 @@
+web1:
+     build: ./web1
+web2:
+     build: ./web2
+lb1:
+     build: ./lb1
+     links:
+     - web1
+     - web2
+     ports:
+     - "8080:80"
+
+
+
+
